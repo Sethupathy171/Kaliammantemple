@@ -5,199 +5,98 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kaliamman Temple</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Serif+Tamil&display=swap" rel="stylesheet">
 
 <style>
-:root {
-    --gold1:#FFD700;
-    --gold2:#ffae00;
-    --maroon:#3b0000;
-    --dark:#0a0000;
-}
-
 *{margin:0;padding:0;box-sizing:border-box;}
-
 body{
-    font-family:'Noto Serif',serif;
-    background:linear-gradient(to bottom,var(--maroon),var(--dark));
-    color:var(--gold1);
+  font-family:'Poppins','Noto Serif Tamil',serif;
+  background:linear-gradient(to bottom,#fdf6e3,#f7e7b7);
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header{
-    background:linear-gradient(to right,#2b0000,#4b0000);
-    border-bottom:2px solid var(--gold2);
-    position:sticky;
-    top:0;
-    z-index:1000;
+  position:sticky; top:0; z-index:999;
+  background:linear-gradient(90deg,#6a11cb,#8e44ad);
+  padding:12px 20px;
+  display:flex; justify-content:space-between; align-items:center;
+  color:#fff; box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+.logo{font-weight:600; text-shadow:0 0 8px gold;}
+nav a{color:#fff; text-decoration:none; margin-left:15px;}
+.btn{margin-left:10px;background:gold;border:none;padding:5px 10px;border-radius:10px;cursor:pointer;}
+
+/* ===== HERO SLIDER ===== */
+.hero{position:relative;height:300px;overflow:hidden;}
+.hero img{
+  position:absolute;width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:1s;
+}
+.hero img.active{opacity:1;}
+.hero-text{
+  position:absolute;bottom:20px;left:50%;transform:translateX(-50%);
+  color:#fff;font-size:24px;font-weight:bold;text-shadow:0 0 15px black;
 }
 
-.container{
-    width:90%;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 0;
+/* ===== SECTION ===== */
+.section{width:95%;margin:25px auto;}
+
+/* ===== HISTORY (PREMIUM) ===== */
+.history-box{
+  padding:3px;border-radius:18px;
+  background:linear-gradient(135deg,#FFD700,#ffae00,#FFD700);
+  box-shadow:0 0 20px rgba(255,215,0,0.7);
+}
+.history-inner{
+  background:#fff8dc;border-radius:16px;padding:20px;line-height:1.8;
 }
 
-.logo{
-    font-size:22px;
-    background:linear-gradient(45deg,var(--gold1),var(--gold2));
-    -webkit-background-clip:text;
-    color:transparent;
+/* ===== GRID ===== */
+.grid{display:flex;gap:25px;margin-top:20px;}
+.left{width:35%;}
+.right{width:65%;}
+
+/* ===== GOLD BOX ===== */
+.box{
+  margin-top:20px;padding:2px;border-radius:15px;
+  background:linear-gradient(135deg,#FFD700,#ffae00,#FFD700);
 }
-
-/* NAV */
-nav a{
-    margin-left:15px;
-    color:var(--gold1);
-    text-decoration:none;
+.box-inner{background:#efe2c0;border-radius:13px;}
+.box-title{
+  background:linear-gradient(90deg,#6a11cb,#8e44ad);
+  color:white;padding:10px;font-weight:bold;
 }
+.box-content{padding:15px;line-height:2;}
+.row{display:flex;justify-content:space-between;}
 
-nav a:hover{
-    color:white;
+/* ===== IMAGE SLIDER ===== */
+.slider{position:relative;height:320px;border-radius:15px;overflow:hidden;}
+.slider img{
+  position:absolute;width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:1s;
 }
-
-/* BUTTON */
-.btn{
-    margin-left:15px;
-    background:linear-gradient(45deg,var(--gold1),var(--gold2));
-    color:black;
-    border:none;
-    padding:6px 12px;
-    border-radius:20px;
-    cursor:pointer;
+.slider img.active{opacity:1;}
+.btn-slide{
+  position:absolute;top:50%;transform:translateY(-50%);
+  background:gold;border:none;padding:10px;border-radius:50%;
+  cursor:pointer;z-index:2;
 }
+.prev{left:10px;} .next{right:10px;}
 
-/* HERO */
-.hero{
-    height:55vh;
-    background:url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAF3raO5ya0N0_rk-rBd32RUkvE0-9g23ITFipAJDReDdtJr0ejBoPjq0BMS_z-5_L2ygo9zintveP58RWaCtJ62IvzLKYolgq-gqxkzGwkjWycdGqO77Hk08E3WPtGYyk6Qe3Tz-_yj4mg=s680-w680-h510-rw') center/cover no-repeat;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
-}
+/* ===== CONTACT ===== */
+.map{margin-top:15px;border-radius:10px;overflow:hidden;}
+.qr{margin-top:15px;text-align:center;}
 
-.hero::after{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.5);
-}
-
-.hero-content{
-    z-index:1;
-}
-
-.hero h1{
-    font-size:32px;
-}
-
-/* SECTION */
-.section{
-    padding:60px 20px;
-    width:90%;
-    margin:auto;
-    overflow:hidden;
-}
-
-h2{
-    border-bottom:2px solid var(--gold2);
-    margin-bottom:20px;
-}
-
-/* CARD */
-.card{
-    background:rgba(255,215,0,0.08);
-    border:1px solid var(--gold2);
-    padding:20px;
-    border-radius:10px;
-}
-
-/* ===== FIXED SLIDER ===== */
-.slider{
-    width:80%;
-    max-width:800px;
-    height:260px;
-    margin:40px auto;
-    position:relative;
-    overflow:hidden;
-    border-radius:15px;
-    border:3px solid var(--gold2);
-    box-shadow:0 0 25px rgba(255,215,0,0.5);
-}
-
-.slides{
-    position:relative;
-    width:100%;
-    height:100%;
-}
-
-.slides img{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:0;
-    transition:opacity 1s ease-in-out;
-}
-
-.slides img.active{
-    opacity:1;
-}
-
-/* BUTTONS */
-.prev,.next{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    background:linear-gradient(45deg,var(--gold1),var(--gold2));
-    color:black;
-    border:none;
-    padding:8px 12px;
-    border-radius:50%;
-    cursor:pointer;
-    z-index:10;
-}
-
-.prev{left:10px;}
-.next{right:10px;}
-
-/* MAP */
-iframe{
-    border-radius:10px;
-    border:2px solid var(--gold2);
-}
-
-/* QR */
-.qr{
-    text-align:center;
-    margin-top:20px;
-}
-
-.qr img{
-    background:white;
-    padding:10px;
-    border-radius:10px;
-    border:2px solid var(--gold2);
-}
-
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer{
-    text-align:center;
-    padding:20px;
-    border-top:2px solid var(--gold2);
-    background:#1a0000;
+  text-align:center;padding:15px;margin-top:30px;
+  background:#5e2b97;color:#fff;
 }
 
 /* MOBILE */
-@media(max-width:768px){
-    .slider{height:200px;}
+@media(max-width:700px){
+  .grid{flex-direction:column;}
+  .left,.right{width:100%;}
 }
 </style>
 </head>
@@ -205,112 +104,156 @@ footer{
 <body>
 
 <header>
-<div class="container">
-    <div class="logo" id="title">Kaliamman Temple</div>
-
-    <nav>
-        <a href="#home" id="nav1">Home</a>
-        <a href="#about" id="nav2">About</a>
-        <a href="#gallery" id="nav3">Gallery</a>
-        <a href="#contact" id="nav4">Contact</a>
-        <button class="btn" onclick="toggleLang()">தமிழ்</button>
-    </nav>
-</div>
+<div class="logo" id="title">Kaliamman Temple</div>
+<nav>
+<a href="#home" id="nav1">Home</a>
+<a href="#history" id="nav2">History</a>
+<a href="#members" id="nav3">Members</a>
+<a href="#contact" id="nav4">Contact</a>
+<button class="btn" onclick="toggleLang()">தமிழ்</button>
+</nav>
 </header>
 
 <!-- HERO -->
-<section class="hero" id="home">
-    <div class="hero-content">
-        <h1 id="hero_text">🔱 Om Sakthi Kaliamman 🔱</h1>
-    </div>
-</section>
+<div class="hero" id="home">
+<img src="https://i.ytimg.com/vi/XtW8GlpuBUM/hqdefault.jpg" class="active">
+<img src="https://i.ytimg.com/vi/D9BKdH9tBq0/hq720.jpg">
+<div class="hero-text" id="hero_text">🔱 Om Sakthi Kaliamman 🔱</div>
+</div>
 
-<!-- ABOUT -->
-<section class="section" id="about">
-    <h2 id="about_title">About Temple</h2>
-    <div class="card" id="about_text">
-        Kaliamman Temple is a sacred place for divine blessings.
-    </div>
-</section>
+<div class="section">
 
-<!-- SLIDER -->
-<section class="section" id="gallery">
-    <h2 id="gallery_title">Gallery</h2>
+<!-- HISTORY -->
+<div class="history-box" id="history">
+<div class="history-inner" id="history_text">
+📜 கோவில் வரலாறு<br><br>
+அருள்மிகு காளியம்மன் திருக்கோவில் பல தலைமுறைகளாக பக்தர்களால் வழிபடப்படுகிறது.
+அம்மனை வழிபட்டால் வாழ்க்கையில் நன்மைகள் கிடைக்கும் என்று நம்பப்படுகிறது.
+<div class="history" onclick="location.href='history.html'">
+📜 Click to view Temple History
+</div>
+</div>
+</div>
 
-    <div class="slider">
-        <div class="slides" id="slides">
-            <img src="https://i.ytimg.com/vi/XtW8GlpuBUM/hqdefault.jpg">
-            <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAF3raO5ya0N0_rk-rBd32RUkvE0-9g23ITFipAJDReDdtJr0ejBoPjq0BMS_z-5_L2ygo9zintveP58RWaCtJ62IvzLKYolgq-gqxkzGwkjWycdGqO77Hk08E3WPtGYyk6Qe3Tz-_yj4mg=s680-w680-h510-rw">
-            <img src="https://i.ytimg.com/vi/D9BKdH9tBq0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBZU2eg2Yjqrtc9yP_NZC0_8kBlSQ">
-        </div>
+<div class="grid">
 
-        <button class="prev" onclick="moveSlide(-1)">‹</button>
-        <button class="next" onclick="moveSlide(1)">›</button>
-    </div>
-</section>
+<!-- LEFT -->
+<div class="left">
+
+<div class="box">
+<div class="box-inner">
+<div class="box-title" id="admin_title">Temple Admin</div>
+<div class="box-content" id="admin_content">
+Chairman - Jayapal <br>
+Secretary - Jagadeesan <br>
+Treasurer - Sethupathy
+</div>
+</div>
+</div>
+
+<div class="box">
+<div class="box-inner">
+<div class="box-title" id="committee_title">Committee Members</div>
+<div class="box-content">
+<div class="row"><span id="c1">Sethupathy</span><span id="c2">Vignesh</span></div>
+<div class="row"><span id="c3">Senthilkumar</span><span id="c4">Jayaganesh</span></div>
+<div class="row"><span id="c5">Kalanithi</span><span id="c6">Moorthi</span></div>
+<div class="row"><span id="c7">Mohan</span><span id="c8">Suresh</span></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- RIGHT SLIDER -->
+<div class="right">
+
+<div class="slider" id="slider">
+<img src="https://i.ytimg.com/vi/XtW8GlpuBUM/hqdefault.jpg" class="active">
+<img src="https://i.ytimg.com/vi/D9BKdH9tBq0/hq720.jpg">
+</div>
+
+<button class="btn-slide prev" onclick="move(-1)">‹</button>
+<button class="btn-slide next" onclick="move(1)">›</button>
+
+</div>
+
+</div>
 
 <!-- CONTACT -->
-<section class="section" id="contact">
-    <h2 id="contact_title">Contact</h2>
+<div id="contact">
+<h2 id="contact_title">Contact</h2>
+<p id="loc">📍 Tamil Nadu</p>
 
-    <div class="card">
-        <p id="loc">📍 Tamil Nadu</p>
-        <p id="ph">📞 +91 9876543210</p>
-    </div>
+<div class="map">
+<iframe src="https://www.google.com/maps?q=Kaliamman%20Temple&output=embed" width="100%" height="250"></iframe>
+</div>
 
-    <div style="margin-top:20px;">
-        <iframe 
-        src="https://www.google.com/maps?q=Kaliamman%20Temple%20Tamil%20Nadu&output=embed"
-        width="100%" height="300"></iframe>
-    </div>
+<div class="qr">
+<p>Scan Location</p>
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Kaliamman%20Temple">
+</div>
+</div>
 
-    <div class="qr">
-        <h3>Scan for Location</h3>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maps.app.goo.gl/C5U9j1kLiJTs6ZVr5">
-    </div>
-</section>
+</div>
 
-<footer>
-    <p>© 2026 Kaliamman Temple</p>
-</footer>
+<footer>© 2026 Kaliamman Temple</footer>
 
 <script>
-let index=0;
-const slides=document.querySelectorAll("#slides img");
-
-function showSlide(i){
-    slides.forEach(img=>img.classList.remove("active"));
-    slides[i].classList.add("active");
+/* SLIDER */
+let i=0;
+const imgs=document.querySelectorAll("#slider img");
+function move(s){
+  imgs[i].classList.remove("active");
+  i=(i+s+imgs.length)%imgs.length;
+  imgs[i].classList.add("active");
 }
+setInterval(()=>move(1),3000);
 
-function moveSlide(step){
-    index=(index+step+slides.length)%slides.length;
-    showSlide(index);
-}
-
-setInterval(()=>{moveSlide(1);},3000);
+/* HERO */
+const heroImgs=document.querySelectorAll(".hero img");
+let h=0;
+setInterval(()=>{
+  heroImgs.forEach(x=>x.classList.remove("active"));
+  h=(h+1)%heroImgs.length;
+  heroImgs[h].classList.add("active");
+},4000);
 
 /* LANGUAGE */
 let tamil=false;
 function toggleLang(){
-    tamil=!tamil;
+tamil=!tamil;
 
-    if(tamil){
-        title.innerText="காளியம்மன் கோவில்";
-        nav1.innerText="முகப்பு";
-        nav2.innerText="பற்றி";
-        nav3.innerText="புகைப்படங்கள்";
-        nav4.innerText="தொடர்பு";
-        hero_text.innerText="🔱 ஓம் சக்தி காளியம்மன் 🔱";
-        about_title.innerText="கோவில் பற்றி";
-        about_text.innerText="இது பக்தர்களுக்கு அருள் தரும் புனித கோவில்.";
-        gallery_title.innerText="புகைப்படங்கள்";
-        contact_title.innerText="தொடர்பு";
-        loc.innerText="📍 தமிழ்நாடு";
-        ph.innerText="📞 +91 9876543210";
-    } else {
-        location.reload();
-    }
+title.innerText=tamil?"காளியம்மன் கோவில்":"Kaliamman Temple";
+nav1.innerText=tamil?"முகப்பு":"Home";
+nav2.innerText=tamil?"வரலாறு":"History";
+nav3.innerText=tamil?"உறுப்பினர்கள்":"Members";
+nav4.innerText=tamil?"தொடர்பு":"Contact";
+
+hero_text.innerText=tamil?"🔱 ஓம் சக்தி காளியம்மன் 🔱":"🔱 Om Sakthi Kaliamman 🔱";
+
+history_text.innerHTML=tamil?
+"📜 கோவில் வரலாறு<br><br>இந்த கோவில் பல தலைமுறைகளாக வழிபடப்படுகிறது.":
+"📜 Temple History<br><br>This temple has been worshipped for generations.";
+
+admin_title.innerText=tamil?"திருக்கோவில் நிர்வாகிகள்":"Temple Admin";
+admin_content.innerHTML=tamil?
+"தலைவர் - ஜெயபால் <br> செயலாளர் - ஜெகதீசன் <br> பொருளாளர் - சேதுபதி":
+"Chairman - Jayapal <br> Secretary - Jagadeesan <br> Treasurer - Sethupathy";
+
+committee_title.innerText=tamil?"கமிட்டி உறுப்பினர்கள்":"Committee Members";
+
+c1.innerText=tamil?"சேதுபதி":"Sethupathy";
+c2.innerText=tamil?"விக்னேஷ்":"Vignesh";
+c3.innerText=tamil?"செந்தில்குமார்":"Senthilkumar";
+c4.innerText=tamil?"ஜெயகணேஷ்":"Jayaganesh";
+c5.innerText=tamil?"கலாநிதி":"Kalanithi";
+c6.innerText=tamil?"மூர்த்தி":"Moorthi";
+c7.innerText=tamil?"மோகன்":"Mohan";
+c8.innerText=tamil?"சுரேஷ்":"Suresh";
+
+contact_title.innerText=tamil?"தொடர்பு":"Contact";
+loc.innerText=tamil?"📍 தமிழ்நாடு":"📍 Tamil Nadu";
 }
 </script>
 
