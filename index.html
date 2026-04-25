@@ -19,30 +19,33 @@ body {
 
 /* 🔥 Header */
 header {
+    position: relative;
     background: linear-gradient(45deg, #8B0000, #FF4500);
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
+/* 🌐 Toggle button RIGHT */
+.lang-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
 }
 
-/* 🌐 Language Buttons */
 .lang-btn button {
     background: gold;
     border: none;
     padding: 8px 15px;
-    margin: 5px;
-    cursor: pointer;
+    margin: 3px;
     border-radius: 20px;
+    cursor: pointer;
     font-weight: bold;
 }
 
 /* 🔗 Navbar */
 nav {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 nav a {
@@ -58,21 +61,21 @@ nav a {
     color: white;
     padding: 12px;
     text-align: center;
-    font-size: 18px;
     font-weight: bold;
 }
 
 /* 🖼️ Slider */
 .slider {
     position: relative;
-    height: 350px;
-    overflow: hidden;
+    width: 100%;
+    height: 450px;
+    background: black;
 }
 
 .slider img {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
+    height: 450px;
+    object-fit: cover;   /* 🔥 FULL IMAGE (fills screen) */
     position: absolute;
     opacity: 0;
     transition: 1s;
@@ -113,25 +116,25 @@ nav a {
     transform: scale(1.05);
 }
 
-/* 🖼️ Gallery */
+/* 🖼️ Gallery (FIXED PERFECT GRID) */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
 }
 
 .gallery img {
-    width: 250px;
-    height: 180px;
-    margin: 10px;
+    width: 100%;
+    height: 250px;           /* 🔥 SAME SIZE */
+    object-fit: cover;       /* 🔥 NO STRETCH */
     border-radius: 10px;
-    object-fit: cover;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     transition: 0.3s;
 }
 
 .gallery img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* 📱 Mobile */
@@ -142,13 +145,38 @@ nav a {
     }
 }
 
+/* 🔍 Popup */
+#imgPopup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    text-align: center;
+}
+
+#imgPopup img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1 id="title">காளியம்மன் கோவில்</h1>
+<h1 id="title">அருள்மிகு ஸ்ரீ காளியம்மன் திருக்கோவில்</h1>
 
 <div class="lang-btn">
 <button onclick="setLang('ta')">தமிழ்</button>
@@ -156,57 +184,61 @@ nav a {
 </div>
 
 <nav>
-<a href="#">Home</a>
-<a href="history.html">History</a>
-<a href="members.html">Members</a>
-<a href="festival.html">Festival</a>
-<a href="contact.html">Contact</a>
+<a href="#" id="navHome">முகப்பு</a>
+<a href="history.html" id="navHistory">வரலாறு</a>
+<a href="members.html" id="navMembers">உறுப்பினர்கள்</a>
+<a href="festival.html" id="navFestival">திருவிழா</a>
+<a href="contact.html" id="navContact">தொடர்பு</a>
 </nav>
 </header>
 
-<!-- 🎉 Festival Banner -->
 <div class="festival" id="festivalText">
-ஆண்டுத் திருவிழா - மே 10 முதல் 15 வரை
+114 ஆம் ஆண்டு பூ குண்டம் திருவிழா - ஏப்ரல் 28 முதல் மே 24 வரை 
 </div>
 
-<!-- 🖼️ Image Slider -->
+<!-- 🖼️ Slider -->
 <div class="slider">
 <img src="temple5.jpg" class="active">
-<img src="temple5.jpg">
-<img src="temple6.jpg">
 <img src="temple3.jpg">
 <img src="temple4.jpg">
+<img src="temple6.jpg">
 </div>
 
 <!-- 🙏 Welcome -->
 <div class="section">
 <h2 id="welcome">வரவேற்கிறோம்</h2>
-<p id="desc">எங்கள் காளியம்மன் கோவிலுக்கு உங்களை அன்புடன் வரவேற்கிறோம்.</p>
+<p id="desc">நமது அருள்மிகு ஸ்ரீ காளியம்மன் திருக்கோவிலுக்கு உங்களை அன்புடன் வரவேற்கிறோம்.</p>
 </div>
 
-<!-- 🧱 Info Cards -->
+<!-- 🧱 Cards -->
 <div class="cards">
 
+<a href="history.html" class="card-link">
 <div class="card">
-<h3>🕉️ வரலாறு</h3>
-<p>கோவிலின் வரலாறு மற்றும் ஆன்மிக முக்கியத்துவம்.</p>
+<h3 id="card1">🕉️ வரலாறு</h3>
+<p id="card1desc">திருக்கோவிலின் வரலாறு மற்றும் முக்கியத்துவம்.</p>
 </div>
+</a>
 
+<a href="members.html" class="card-link">
 <div class="card">
-<h3>👥 உறுப்பினர்கள்</h3>
-<p>கோவில் நிர்வாக உறுப்பினர்கள் மற்றும் சேவையாளர்கள்.</p>
+<h3 id="card2">👥 உறுப்பினர்கள்</h3>
+<p id="card2desc">திருக்கோவிலின் நிர்வாக உறுப்பினர்கள்.</p>
 </div>
+</a>
 
+<a href="festival.html" class="card-link">
 <div class="card">
-<h3>🎉 திருவிழாக்கள்</h3>
-<p>ஆண்டுதோறும் நடைபெறும் திருவிழாக்கள்.</p>
+<h3 id="card3">🎉 திருவிழாக்கள்</h3>
+<p id="card3desc">ஆண்டுதோறும் நடைபெறும் திருவிழாக்கள்.</p>
 </div>
+</a>
 
 </div>
 
 <!-- 🛕 Gallery -->
 <div class="section">
-<h2>கோவில் புகைப்படங்கள்</h2>
+<h2 id="galleryTitle">திருக்கோவிலின் புகைப்படங்கள்</h2>
 
 <div class="gallery">
 <img src="temple1.jpg">
@@ -215,42 +247,89 @@ nav a {
 <img src="temple4.jpg">
 <img src="temple5.jpg">
 <img src="temple6.jpg">
-
 </div>
 </div>
 
-<!-- ⚙️ Scripts -->
 <script>
 
 /* 🌐 Language Toggle */
+const data = {
+    en: {
+        title: "Arul Migu Sri Kaliamman Temple",
+        welcome: "Welcome",
+        desc: "Welcome To Our Arul Migu Sri Kaliamman Temple.",
+        festival: "114 th Annual Pookundam Festival - April 28th to May 24th",
+        home: "Home",
+        history: "History",
+        members: "Members",
+        festivalMenu: "Festival",
+        contact: "Contact",
+        card1: "🕉️ History",
+        card1desc: "Temple history and importance",
+        card2: "👥 Members",
+        card2desc: "Temple administration",
+        card3: "🎉 Festivals",
+        card3desc: "Annual celebrations",
+        gallery: "Temple Photos"
+    },
+    ta: {
+        title: "அருள்மிகு ஸ்ரீ காளியம்மன் திருக்கோவில் ",
+        welcome: "வரவேற்கிறோம்",
+        desc: "நமது அருள்மிகு ஸ்ரீ காளியம்மன் திருக்கோவிலுக்கு உங்களை அன்புடன் வரவேற்கிறோம்.",
+        festival: "114 ஆம் ஆண்டு பூ குண்டம் திருவிழா - ஏப்ரல் 28 முதல் மே 24 வரை ",
+        home: "முகப்பு",
+        history: "வரலாறு",
+        members: "உறுப்பினர்கள்",
+        festivalMenu: "திருவிழா",
+        contact: "தொடர்பு",
+        card1: "🕉️ வரலாறு",
+        card1desc: "திருக்கோவிலின் வரலாறு மற்றும் முக்கியத்துவம்",
+        card2: "👥 உறுப்பினர்கள்",
+        card2desc: "திருக்கோவிலின் நிர்வாக உறுப்பினர்கள்",
+        card3: "🎉 திருவிழாக்கள்",
+        card3desc: "ஆண்டுதோறும் திருவிழாக்கள்",
+        gallery: "திருக்கோவிலின் புகைப்படங்கள்"
+    }
+};
+
 function setLang(lang) {
+    let t = data[lang];
 
-    if (lang === "en") {
-        document.getElementById("title").innerText = "Kaliamman Temple";
-        document.getElementById("welcome").innerText = "Welcome";
-        document.getElementById("desc").innerText = "Welcome to our temple.";
-        document.getElementById("festivalText").innerText = "Annual Festival - May 10 to 15";
-    }
+    title.innerText = t.title;
+    welcome.innerText = t.welcome;
+    desc.innerText = t.desc;
+    festivalText.innerText = t.festival;
 
-    if (lang === "ta") {
-        document.getElementById("title").innerText = "காளியம்மன் கோவில்";
-        document.getElementById("welcome").innerText = "வரவேற்கிறோம்";
-        document.getElementById("desc").innerText = "எங்கள் காளியம்மன் கோவிலுக்கு உங்களை அன்புடன் வரவேற்கிறோம்.";
-        document.getElementById("festivalText").innerText = "ஆண்டுத் திருவிழா - மே 10 முதல் 15 வரை";
-    }
+    navHome.innerText = t.home;
+    navHistory.innerText = t.history;
+    navMembers.innerText = t.members;
+    navFestival.innerText = t.festivalMenu;
+    navContact.innerText = t.contact;
+
+    card1.innerText = t.card1;
+    card1desc.innerText = t.card1desc;
+    card2.innerText = t.card2;
+    card2desc.innerText = t.card2desc;
+    card3.innerText = t.card3;
+    card3desc.innerText = t.card3desc;
+
+    galleryTitle.innerText = t.gallery;
 }
 
 /* 🖼️ Slider */
 let slides = document.querySelectorAll(".slider img");
-let index = 0;
+let i = 0;
 
 setInterval(() => {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
+    slides[i].classList.remove("active");
+    i = (i + 1) % slides.length;
+    slides[i].classList.add("active");
 }, 3000);
 
 </script>
-
+<!-- 🔍 Image Popup -->
+<div id="imgPopup" onclick="closePopup()">
+    <img id="popupImg">
+</div>
 </body>
 </html>
