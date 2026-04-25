@@ -1,0 +1,19 @@
+<input type="email" id="email">
+<input type="password" id="password">
+<button onclick="login()">Login</button>
+
+<script>
+async function login() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const { user, error } = await supabase.auth.signInWithPassword({
+        email,
+        password
+    });
+
+    if(user){
+        window.location = "dashboard.html";
+    }
+}
+</script>
