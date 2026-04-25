@@ -1,260 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kaliamman Temple</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Serif+Tamil&display=swap" rel="stylesheet">
+<title>காளியம்மன் கோவில்</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-  font-family:'Poppins','Noto Serif Tamil',serif;
-  background:linear-gradient(to bottom,#fdf6e3,#f7e7b7);
+
+/* 🌈 Body */
+body {
+    margin: 0;
+    font-family: 'Noto Serif Tamil', serif;
+    background: linear-gradient(to right, #fff5e6, #ffe6e6);
 }
 
-/* ===== HEADER ===== */
-header{
-  position:sticky; top:0; z-index:999;
-  background:linear-gradient(90deg,#6a11cb,#8e44ad);
-  padding:12px 20px;
-  display:flex; justify-content:space-between; align-items:center;
-  color:#fff; box-shadow:0 3px 10px rgba(0,0,0,0.2);
-}
-.logo{font-weight:600; text-shadow:0 0 8px gold;}
-nav a{color:#fff; text-decoration:none; margin-left:15px;}
-.btn{margin-left:10px;background:gold;border:none;padding:5px 10px;border-radius:10px;cursor:pointer;}
-
-/* ===== HERO SLIDER ===== */
-.hero{position:relative;height:300px;overflow:hidden;}
-.hero img{
-  position:absolute;width:100%;height:100%;object-fit:cover;
-  opacity:0;transition:1s;
-}
-.hero img.active{opacity:1;}
-.hero-text{
-  position:absolute;bottom:20px;left:50%;transform:translateX(-50%);
-  color:#fff;font-size:24px;font-weight:bold;text-shadow:0 0 15px black;
+/* 🔥 Header */
+header {
+    background: linear-gradient(45deg, #8B0000, #FF4500);
+    color: white;
+    padding: 15px;
+    text-align: center;
 }
 
-/* ===== SECTION ===== */
-.section{width:95%;margin:25px auto;}
-
-/* ===== HISTORY (PREMIUM) ===== */
-.history-box{
-  padding:3px;border-radius:18px;
-  background:linear-gradient(135deg,#FFD700,#ffae00,#FFD700);
-  box-shadow:0 0 20px rgba(255,215,0,0.7);
-}
-.history-inner{
-  background:#fff8dc;border-radius:16px;padding:20px;line-height:1.8;
+header h1 {
+    margin: 0;
 }
 
-/* ===== GRID ===== */
-.grid{display:flex;gap:25px;margin-top:20px;}
-.left{width:35%;}
-.right{width:65%;}
-
-/* ===== GOLD BOX ===== */
-.box{
-  margin-top:20px;padding:2px;border-radius:15px;
-  background:linear-gradient(135deg,#FFD700,#ffae00,#FFD700);
-}
-.box-inner{background:#efe2c0;border-radius:13px;}
-.box-title{
-  background:linear-gradient(90deg,#6a11cb,#8e44ad);
-  color:white;padding:10px;font-weight:bold;
-}
-.box-content{padding:15px;line-height:2;}
-.row{display:flex;justify-content:space-between;}
-
-/* ===== IMAGE SLIDER ===== */
-.slider{position:relative;height:320px;border-radius:15px;overflow:hidden;}
-.slider img{
-  position:absolute;width:100%;height:100%;object-fit:cover;
-  opacity:0;transition:1s;
-}
-.slider img.active{opacity:1;}
-.btn-slide{
-  position:absolute;top:50%;transform:translateY(-50%);
-  background:gold;border:none;padding:10px;border-radius:50%;
-  cursor:pointer;z-index:2;
-}
-.prev{left:10px;} .next{right:10px;}
-
-/* ===== CONTACT ===== */
-.map{margin-top:15px;border-radius:10px;overflow:hidden;}
-.qr{margin-top:15px;text-align:center;}
-
-/* ===== FOOTER ===== */
-footer{
-  text-align:center;padding:15px;margin-top:30px;
-  background:#5e2b97;color:#fff;
+/* 🌐 Language Buttons */
+.lang-btn button {
+    background: gold;
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
-/* MOBILE */
-@media(max-width:700px){
-  .grid{flex-direction:column;}
-  .left,.right{width:100%;}
+/* 🔗 Navbar */
+nav {
+    margin-top: 10px;
 }
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 🎉 Festival */
+.festival {
+    background: linear-gradient(to right, orange, red);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 🖼️ Slider */
+.slider {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
+/* ✨ Section */
+.section {
+    padding: 30px;
+    text-align: center;
+}
+
+.section h2 {
+    color: maroon;
+}
+
+/* 🧱 Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* 🖼️ Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 250px;
+    height: 180px;
+    margin: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* 📱 Mobile */
+@media(max-width:768px){
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo" id="title">Kaliamman Temple</div>
+<h1 id="title">காளியம்மன் கோவில்</h1>
+
+<div class="lang-btn">
+<button onclick="setLang('ta')">தமிழ்</button>
+<button onclick="setLang('en')">English</button>
+</div>
+
 <nav>
-<a href="#home" id="nav1">Home</a>
-<a href="#history" id="nav2">History</a>
-<a href="#members" id="nav3">Members</a>
-<a href="#contact" id="nav4">Contact</a>
-<button class="btn" onclick="toggleLang()">தமிழ்</button>
+<a href="#">Home</a>
+<a href="history.html">History</a>
+<a href="members.html">Members</a>
+<a href="festival.html">Festival</a>
+<a href="contact.html">Contact</a>
 </nav>
 </header>
 
-<!-- HERO -->
-<div class="hero" id="home">
-<img src="https://i.ytimg.com/vi/XtW8GlpuBUM/hqdefault.jpg" class="active">
-<img src="https://i.ytimg.com/vi/D9BKdH9tBq0/hq720.jpg">
-<div class="hero-text" id="hero_text">🔱 Om Sakthi Kaliamman 🔱</div>
+<!-- 🎉 Festival Banner -->
+<div class="festival" id="festivalText">
+ஆண்டுத் திருவிழா - மே 10 முதல் 15 வரை
 </div>
 
+<!-- 🖼️ Image Slider -->
+<div class="slider">
+<img src="temple5.jpg" class="active">
+<img src="temple5.jpg">
+<img src="temple6.jpg">
+<img src="temple3.jpg">
+<img src="temple4.jpg">
+</div>
+
+<!-- 🙏 Welcome -->
 <div class="section">
-
-<!-- HISTORY -->
-<div class="history-box" id="history">
-<div class="history-inner" id="history_text">
-📜 கோவில் வரலாறு<br><br>
-அருள்மிகு காளியம்மன் திருக்கோவில் பல தலைமுறைகளாக பக்தர்களால் வழிபடப்படுகிறது.
-அம்மனை வழிபட்டால் வாழ்க்கையில் நன்மைகள் கிடைக்கும் என்று நம்பப்படுகிறது.
-<div class="history" onclick="location.href='history.html'">
-📜 Click to view Temple History
-</div>
-</div>
+<h2 id="welcome">வரவேற்கிறோம்</h2>
+<p id="desc">எங்கள் காளியம்மன் கோவிலுக்கு உங்களை அன்புடன் வரவேற்கிறோம்.</p>
 </div>
 
-<div class="grid">
+<!-- 🧱 Info Cards -->
+<div class="cards">
 
-<!-- LEFT -->
-<div class="left">
-
-<div class="box">
-<div class="box-inner">
-<div class="box-title" id="admin_title">Temple Admin</div>
-<div class="box-content" id="admin_content">
-Chairman - Jayapal <br>
-Secretary - Jagadeesan <br>
-Treasurer - Sethupathy
-</div>
-</div>
+<div class="card">
+<h3>🕉️ வரலாறு</h3>
+<p>கோவிலின் வரலாறு மற்றும் ஆன்மிக முக்கியத்துவம்.</p>
 </div>
 
-<div class="box">
-<div class="box-inner">
-<div class="box-title" id="committee_title">Committee Members</div>
-<div class="box-content">
-<div class="row"><span id="c1">Sethupathy</span><span id="c2">Vignesh</span></div>
-<div class="row"><span id="c3">Senthilkumar</span><span id="c4">Jayaganesh</span></div>
-<div class="row"><span id="c5">Kalanithi</span><span id="c6">Moorthi</span></div>
-<div class="row"><span id="c7">Mohan</span><span id="c8">Suresh</span></div>
+<div class="card">
+<h3>👥 உறுப்பினர்கள்</h3>
+<p>கோவில் நிர்வாக உறுப்பினர்கள் மற்றும் சேவையாளர்கள்.</p>
 </div>
-</div>
+
+<div class="card">
+<h3>🎉 திருவிழாக்கள்</h3>
+<p>ஆண்டுதோறும் நடைபெறும் திருவிழாக்கள்.</p>
 </div>
 
 </div>
 
-<!-- RIGHT SLIDER -->
-<div class="right">
+<!-- 🛕 Gallery -->
+<div class="section">
+<h2>கோவில் புகைப்படங்கள்</h2>
 
-<div class="slider" id="slider">
-<img src="https://i.ytimg.com/vi/XtW8GlpuBUM/hqdefault.jpg" class="active">
-<img src="https://i.ytimg.com/vi/D9BKdH9tBq0/hq720.jpg">
-</div>
+<div class="gallery">
+<img src="temple1.jpg">
+<img src="temple2.jpg">
+<img src="temple3.jpg">
+<img src="temple4.jpg">
+<img src="temple5.jpg">
+<img src="temple6.jpg">
 
-<button class="btn-slide prev" onclick="move(-1)">‹</button>
-<button class="btn-slide next" onclick="move(1)">›</button>
-
-</div>
-
-</div>
-
-<!-- CONTACT -->
-<div id="contact">
-<h2 id="contact_title">Contact</h2>
-<p id="loc">📍 Tamil Nadu</p>
-
-<div class="map">
-<iframe src="https://www.google.com/maps?q=Kaliamman%20Temple&output=embed" width="100%" height="250"></iframe>
-</div>
-
-<div class="qr">
-<p>Scan Location</p>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Kaliamman%20Temple">
 </div>
 </div>
 
-</div>
-
-<footer>© 2026 Kaliamman Temple</footer>
-
+<!-- ⚙️ Scripts -->
 <script>
-/* SLIDER */
-let i=0;
-const imgs=document.querySelectorAll("#slider img");
-function move(s){
-  imgs[i].classList.remove("active");
-  i=(i+s+imgs.length)%imgs.length;
-  imgs[i].classList.add("active");
+
+/* 🌐 Language Toggle */
+function setLang(lang) {
+
+    if (lang === "en") {
+        document.getElementById("title").innerText = "Kaliamman Temple";
+        document.getElementById("welcome").innerText = "Welcome";
+        document.getElementById("desc").innerText = "Welcome to our temple.";
+        document.getElementById("festivalText").innerText = "Annual Festival - May 10 to 15";
+    }
+
+    if (lang === "ta") {
+        document.getElementById("title").innerText = "காளியம்மன் கோவில்";
+        document.getElementById("welcome").innerText = "வரவேற்கிறோம்";
+        document.getElementById("desc").innerText = "எங்கள் காளியம்மன் கோவிலுக்கு உங்களை அன்புடன் வரவேற்கிறோம்.";
+        document.getElementById("festivalText").innerText = "ஆண்டுத் திருவிழா - மே 10 முதல் 15 வரை";
+    }
 }
-setInterval(()=>move(1),3000);
 
-/* HERO */
-const heroImgs=document.querySelectorAll(".hero img");
-let h=0;
-setInterval(()=>{
-  heroImgs.forEach(x=>x.classList.remove("active"));
-  h=(h+1)%heroImgs.length;
-  heroImgs[h].classList.add("active");
-},4000);
+/* 🖼️ Slider */
+let slides = document.querySelectorAll(".slider img");
+let index = 0;
 
-/* LANGUAGE */
-let tamil=false;
-function toggleLang(){
-tamil=!tamil;
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 3000);
 
-title.innerText=tamil?"காளியம்மன் கோவில்":"Kaliamman Temple";
-nav1.innerText=tamil?"முகப்பு":"Home";
-nav2.innerText=tamil?"வரலாறு":"History";
-nav3.innerText=tamil?"உறுப்பினர்கள்":"Members";
-nav4.innerText=tamil?"தொடர்பு":"Contact";
-
-hero_text.innerText=tamil?"🔱 ஓம் சக்தி காளியம்மன் 🔱":"🔱 Om Sakthi Kaliamman 🔱";
-
-history_text.innerHTML=tamil?
-"📜 கோவில் வரலாறு<br><br>இந்த கோவில் பல தலைமுறைகளாக வழிபடப்படுகிறது.":
-"📜 Temple History<br><br>This temple has been worshipped for generations.";
-
-admin_title.innerText=tamil?"திருக்கோவில் நிர்வாகிகள்":"Temple Admin";
-admin_content.innerHTML=tamil?
-"தலைவர் - ஜெயபால் <br> செயலாளர் - ஜெகதீசன் <br> பொருளாளர் - சேதுபதி":
-"Chairman - Jayapal <br> Secretary - Jagadeesan <br> Treasurer - Sethupathy";
-
-committee_title.innerText=tamil?"கமிட்டி உறுப்பினர்கள்":"Committee Members";
-
-c1.innerText=tamil?"சேதுபதி":"Sethupathy";
-c2.innerText=tamil?"விக்னேஷ்":"Vignesh";
-c3.innerText=tamil?"செந்தில்குமார்":"Senthilkumar";
-c4.innerText=tamil?"ஜெயகணேஷ்":"Jayaganesh";
-c5.innerText=tamil?"கலாநிதி":"Kalanithi";
-c6.innerText=tamil?"மூர்த்தி":"Moorthi";
-c7.innerText=tamil?"மோகன்":"Mohan";
-c8.innerText=tamil?"சுரேஷ்":"Suresh";
-
-contact_title.innerText=tamil?"தொடர்பு":"Contact";
-loc.innerText=tamil?"📍 தமிழ்நாடு":"📍 Tamil Nadu";
-}
 </script>
 
 </body>
