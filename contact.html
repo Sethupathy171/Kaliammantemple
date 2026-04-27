@@ -9,15 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil&display=swap" rel="stylesheet">
 
 <style>
-
-/* 🌈 Body */
 body {
     margin: 0;
     font-family: 'Noto Serif Tamil', serif;
     background: linear-gradient(to right, #fff5e6, #ffe6e6);
 }
-
-/* 🔥 Header */
 header {
     background: linear-gradient(45deg, #8B0000, #FF4500);
     color: white;
@@ -26,14 +22,11 @@ header {
     position: sticky;
     top: 0;
 }
-
-/* 🌐 Toggle */
 .lang-btn {
     position: absolute;
     top: 15px;
     right: 20px;
 }
-
 .lang-btn button {
     background: gold;
     border: none;
@@ -43,27 +36,22 @@ header {
     cursor: pointer;
     font-weight: bold;
 }
-
 nav a {
     color: white;
     margin: 10px;
     text-decoration: none;
     font-weight: bold;
 }
-
-/* 🖼 Hero */
 .hero {
     background: url('images/temple1.jpg') center/cover no-repeat;
     height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(131, 7, 7, 0.959);
+    color: rgb(83, 2, 2);
     font-size: 28px;
     font-weight: bold;
 }
-
-/* 📦 Section */
 .section {
     max-width: 950px;
     margin: -50px auto 30px;
@@ -72,22 +60,16 @@ nav a {
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
-
-/* 🏷 Title */
 .section h2 {
     text-align: center;
     color: maroon;
 }
-
-/* 📍 Address */
 .address {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;
 }
-
-/* 👤 Contact Cards */
 .contact-card {
     background: linear-gradient(135deg,#fff,#f1f1f1);
     padding: 15px;
@@ -98,8 +80,6 @@ nav a {
     align-items: center;
     border-left: 5px solid #8B0000;
 }
-
-/* 📞 Button */
 .call-btn {
     background: green;
     color: white;
@@ -107,13 +87,10 @@ nav a {
     border-radius: 20px;
     text-decoration: none;
 }
-
-/* 🔗 Links */
 .links {
     text-align: center;
     margin-top: 20px;
 }
-
 .links a {
     display: inline-block;
     margin: 8px;
@@ -123,16 +100,12 @@ nav a {
     border-radius: 25px;
     text-decoration: none;
 }
-
-/* 🗺 Map */
 .map iframe {
     width: 100%;
     height: 300px;
     border-radius: 10px;
     margin-top: 20px;
 }
-
-/* Floating Buttons */
 .floating-container {
     position: fixed;
     right: 15px;
@@ -141,21 +114,14 @@ nav a {
     flex-direction: column;
     gap: 12px;
 }
-
 .float-box {
-    display: flex;
-    align-items: center;
-    gap: 8px;
     padding: 12px 15px;
     color: white;
-    font-size: 14px;
     border-radius: 30px;
     text-decoration: none;
 }
-
 .call { background: green; }
 .whatsapp { background: #25D366; }
-
 </style>
 </head>
 
@@ -173,11 +139,11 @@ nav a {
 </div>
 
 <nav>
-<a href="index.html">முகப்பு</a>
-<a href="history.html">வரலாறு</a>
-<a href="members.html">உறுப்பினர்கள்</a>
-<a href="festival.html">திருவிழா</a>
-<a href="contact.html">தொடர்பு</a>
+<a href="index.html" data-ta="முகப்பு" data-en="Home">முகப்பு</a>
+<a href="history.html" data-ta="வரலாறு" data-en="History">வரலாறு</a>
+<a href="members.html" data-ta="உறுப்பினர்கள்" data-en="Members">உறுப்பினர்கள்</a>
+<a href="festival.html" data-ta="திருவிழா" data-en="Festival">திருவிழா</a>
+<a href="contact.html" data-ta="தொடர்பு" data-en="Contact">தொடர்பு</a>
 </nav>
 
 </header>
@@ -196,17 +162,14 @@ data-en="📞 Contact">
 
 <div class="address"
 data-ta="அருள்மிகு ஸ்ரீ காளியம்மன் திருக்கோவில்,<br>
-168, லைட் ஹவுஸ் ரோடு,<br>
-ஆர்.எஸ்.புரம்,<br>
-கோயம்பத்தூர்,<br>
+ 168, லைட் ஹவுஸ் ரோடு,<br> பழைய கென்னடி தியேட்டர் பின்புறம்,<br>
+  ஆர்.எஸ்.புரம்,<br>
+  கோயம்பத்தூர்,<br>
 தமிழ்நாடு - 641001<br>"
-data-en="Arul Migu Shree Kaliamman Temple,<br>
- 168, Light House Road,<br>
-  RS Puram,<br>
-  Coimbatore,<br>
-TamilNadu-641001<br>">
-
-அருள்மிகு ஸ்ரீ காளியம்மன் கோவில்...
+data-en="Arul Migu Shree Kaliamman Temple,<br> 168, Light House Road,<br>Old Kennady Theater Backside<br>
+ RS Puram <br>
+TamilNadu- 641001<br>">
+அருள்மிகு ஸ்ரீ காளியம்மன் திருக்கோவில்...
 </div>
 
 <div class="contact-card">
@@ -214,7 +177,8 @@ TamilNadu-641001<br>">
 data-en="Secretary - V. Jagadeesan">
 செயலாளர்
 </span>
-<a href="tel:9843365721" class="call-btn">📞 Call</a>
+<a href="tel:9843365721" class="call-btn"
+data-ta="📞 அழைக்க" data-en="📞 Call">📞 Call</a>
 </div>
 
 <div class="contact-card">
@@ -222,7 +186,8 @@ data-en="Secretary - V. Jagadeesan">
 data-en="Committee Member - J. Sethupathy">
 உறுப்பினர்
 </span>
-<a href="tel:7200983877" class="call-btn">📞 Call</a>
+<a href="tel:7200983877" class="call-btn"
+data-ta="📞 அழைக்க" data-en="📞 Call">📞 Call</a>
 </div>
 
 <div class="contact-card">
@@ -230,25 +195,43 @@ data-en="Committee Member - J. Sethupathy">
 data-en="Committee Member - J. Vignesh">
 உறுப்பினர்
 </span>
-<a href="tel:9597825661" class="call-btn">📞 Call</a>
+<a href="tel:9597825661" class="call-btn"
+data-ta="📞 அழைக்க" data-en="📞 Call">📞 Call</a>
 </div>
 
 <div class="links">
-<a href="mailto:kaliammankovil171@gmail.com">📧 Email</a>
-<a href="https://youtube.com/channel/UCW6-iOwd033xHtuwCRF9AOg">▶ YouTube</a>
-<a href="https://www.facebook.com/share/1KXov4HH5L/">📘 Facebook</a>
-<a href="https://chat.whatsapp.com/HsMJzRs6376HA8AnjbFu6e">💬 WhatsApp</a>
+
+<a href="mailto:kaliammankovil171@gmail.com"
+data-ta="📧 மின்னஞ்சல்" data-en="📧 Email">📧 Email</a>
+
+<a href="https://youtube.com/channel/UCW6-iOwd033xHtuwCRF9AOg"
+data-ta="▶ யூடியூப்" data-en="▶ YouTube">▶ YouTube</a>
+
+<a href="https://www.facebook.com/share/1KXov4HH5L/"
+data-ta="📘 பேஸ்புக்" data-en="📘 Facebook">📘 Facebook</a>
+
+<a href="https://chat.whatsapp.com/HsMJzRs6376HA8AnjbFu6e"
+data-ta="💬 வாட்ஸ்அப் குழு" data-en="💬 WhatsApp Group">💬 WhatsApp</a>
+
+<a href="https://maps.app.goo.gl/GG8VSkCys8czTkvbA"
+data-ta="📍 இருப்பிடம்" data-en="📍 Location">📍 Location</a>
+
 </div>
 
 <div class="map">
+<a href="https://maps.app.goo.gl/GG8VSkCys8czTkvbA" target="_blank">
 <iframe src="https://www.google.com/maps?q=168,Light+House+Road,RS+Puram,Coimbatore&output=embed"></iframe>
+</a>
 </div>
 
 </div>
 
 <div class="floating-container">
-<a href="tel:7200983877" class="float-box call">📞 Call</a>
-<a href="https://wa.me/917200983877" class="float-box whatsapp">💬 WhatsApp</a>
+<a href="tel:7200983877" class="float-box call"
+data-ta="📞 அழைக்க" data-en="📞 Call">📞 Call</a>
+
+<a href="https://wa.me/917200983877" class="float-box whatsapp"
+data-ta="💬 வாட்ஸ்அப்" data-en="💬 WhatsApp">💬 WhatsApp</a>
 </div>
 
 <script>
