@@ -84,9 +84,55 @@ nav a {
     transform: scale(1.05);
 }
 
+/* 🕰️ TIMING BOX */
+.hours-box {
+    background: #f4f4f4;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.row:last-child {
+    border-bottom: none;
+}
+
+.row span:first-child {
+    color: #8B0000;
+    font-weight: bold;
+    width: 120px;
+}
+
+.row span:last-child {
+    text-align: right;
+    flex: 1;
+}
+
+/* ⭐ Highlight Friday */
+.row:nth-child(5) {
+    background: #fff3e0;
+    border-left: 5px solid orange;
+}
+
 /* 📱 Mobile */
-@media(max-width:768px){
-    .section { margin: 15px; }
+@media(max-width:600px){
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .row span:last-child {
+        text-align: left;
+    }
 }
 
 </style>
@@ -117,6 +163,79 @@ data-en="Arulmigu Sri Kaliamman Temple">
 
 </header>
 
+<!-- 🕰️ Temple Timings -->
+<div class="section">
+
+<h2 data-ta="🕰️ கோவில் நேரம்"
+data-en="🕰️ Temple Hours">
+🕰️ கோவில் நேரம்
+</h2>
+
+<div class="hours-box">
+
+<div class="row">
+<span data-ta="திங்கள்" data-en="Monday">திங்கள்</span>
+<span>7:30 AM – 10:30 AM, 6:00 PM – 8:00 PM</span>
+</div>
+
+<div class="row">
+<span data-ta="செவ்வாய்" data-en="Tuesday">செவ்வாய்</span>
+<span>7:00 AM – 12:00 PM, 6:00 PM – 8:30 PM</span>
+</div>
+
+<div class="row">
+<span data-ta="புதன்" data-en="Wednesday">புதன்</span>
+<span>7:30 AM – 10:30 AM, 6:00 PM – 8:00 PM</span>
+</div>
+
+<div class="row">
+<span data-ta="வியாழன்" data-en="Thursday">வியாழன்</span>
+<span>7:30 AM – 10:30 AM, 6:00 PM – 8:00 PM</span>
+</div>
+
+<div class="row">
+<span data-ta="வெள்ளி" data-en="Friday">வெள்ளி</span>
+<span>7:00 AM – 12:30 PM, 6:00 PM – 9:30 PM</span>
+</div>
+
+<div class="row">
+<span data-ta="சனி" data-en="Saturday">சனி</span>
+<span>7:30 AM – 10:30 AM , 6:00 PM – 8:00 PM</span>
+</div>
+
+<div class="row">
+<span data-ta="ஞாயிறு" data-en="Sunday">ஞாயிறு</span>
+<span>7:30 AM – 11:00 AM</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- 🙏 Daily Pooja -->
+<div class="section">
+
+<h2 data-ta="🙏 தினசரி பூஜைகள்"
+data-en="🙏 Daily Poojas">
+🙏 தினசரி பூஜைகள்
+</h2>
+
+<div class="grid">
+
+<div class="card" data-ta="காலை பூஜை – காலை 8.30 மணி"
+data-en="Morning Pooja – 8:30 AM">காலை பூஜை</div>
+
+<div class="card" data-ta="உச்சிகால பூஜை – மதியம் 11.00 மணி"
+data-en="Noon Pooja – 11:00 AM">உச்சிகால பூஜை</div>
+
+<div class="card" data-ta="சாயங்கால பூஜை – மாலை 7.00 மணி"
+data-en="Evening Pooja – 7:00 PM">சாயங்கால பூஜை</div>
+
+</div>
+
+</div>
+
+<!-- 🌼 Regular Poojas -->
 <div class="section">
 
 <h2 data-ta="🙏 வழக்கமான பூஜைகள்"
@@ -126,53 +245,23 @@ data-en="🙏 Regular Poojas">
 
 <div class="grid">
 
-<div class="card"
-data-ta="ஆடி திருவிழா – ஆடி மாதம் முழுவதும் வெள்ளிக்கிழமை சிறப்பு பூஜைகள் மற்றும் அன்னதானம் நடைபெறும்."
-data-en="Aadi Festival – Special poojas throughout Aadi month Friday.">
-ஆடி திருவிழா
-</div>
+<div class="card" data-ta="ஆடி திருவிழா – வெள்ளிக்கிழமை சிறப்பு பூஜை"
+data-en="Aadi Festival – Friday special pooja">ஆடி திருவிழா</div>
 
-<div class="card"
-data-ta="அமாவாசை – அபிஷேக அலங்கார பூஜை நடைபெறும். "
-data-en="Amavasai – Abhishekam and Alangara pooja">
-அமாவாசை
-</div>
+<div class="card" data-ta="அமாவாசை – அபிஷேக பூஜை"
+data-en="Amavasai – Abhishekam pooja">அமாவாசை</div>
 
-<div class="card"
-data-ta="பௌர்ணமி – அபிஷேக அலங்கார பூஜை நடைபெறும்."
-data-en="Pournami – Abhishekam and Alangara pooja.">
-பௌர்ணமி
-</div>
+<div class="card" data-ta="பௌர்ணமி – அலங்கார பூஜை"
+data-en="Pournami – Alangara pooja">பௌர்ணமி</div>
 
-<div class="card"
-data-ta="ஆடி திருக்கல்யாணம் – அம்மன் திருக்கல்யாண வைபோகம்."
-data-en="Aadi Thirukalyanam – Divine wedding ceremony.">
-ஆடி திருக்கல்யாணம்
-</div>
+<div class="card" data-ta="ஆடி திருக்கல்யாணம்"
+data-en="Aadi Thirukalyanam">ஆடி திருக்கல்யாணம்</div>
 
-<div class="card"
-data-ta="சங்கடஹர சதுர்த்தி – விநாயகர் சிறப்பு அபிஷேக அலங்கார பூஜை நடைபெறும்."
-data-en="Sankadahara Chathurthi – Special Abhishekam and Alangara pooja for Lord Ganesha.">
-சங்கடஹர சதுர்த்தி
-</div>
+<div class="card" data-ta="சங்கடஹர சதுர்த்தி"
+data-en="Sankadahara Chathurthi">சங்கடஹர சதுர்த்தி</div>
 
-<div class="card"
-data-ta="கிருத்திகை – முருகன் வழிபாடு மற்றும் தீபம்."
-data-en="Krithigai – Special Abhishekam and Alangara pooja for Lord Murugan.">
-கிருத்திகை
-</div>
-
-<div class="card"
-data-ta="நவராத்திரி – 9 நாள் அம்மன் பூஜைகள்."
-data-en="Navaratri – 9 days of goddess worship.">
-நவராத்திரி
-</div>
-
-<div class="card"
-data-ta="பொங்கல் – சிறப்பு வழிபாடு மற்றும் அன்னதானம்."
-data-en="Pongal – Special pooja and annadhanam.">
-பொங்கல்
-</div>
+<div class="card" data-ta="கிருத்திகை"
+data-en="Krithigai">கிருத்திகை</div>
 
 </div>
 
